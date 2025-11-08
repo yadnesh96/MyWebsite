@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="stylesheet" href="coustom.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  integrity="sha512-olN7mKnZibTldpV3Yyyo3+I9EptJ6J4d7yQKzYh9LBYHk5KfS9TbEo9gO8B9FZ/xZx5xG3Yw8WcD+iVffUsJfQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  >
+
+</head>
+<body>
+  <section class="sub-header">
+    <nav>
+      <a href="index.html"><img src="https://www.deshpandeinvestments.com/hs-fs/hubfs/WhatsApp%20Image%202024-11-01%20at%2014.27.47-1.jpeg"></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times-circle " onclick="hidemenu()"></i>  
+          <ul>
+                <li><a href="index .html">Home</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="About.html">About</a></li>
+                 <li><a href="Blog.html">Blog</a></li>
+
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showmenu()" ></i>
+      
+    </nav> 
+    <h1>Blog</h1>
+    <p></p>
+  </section>
+  <!---slider-->
+  <section class="cam">
+    <h1>Our Gallary</h1>
+  <div class="slider">
+  <div class="slides">
+    <img src="images/banner.jpg" class="active">
+    <img src="images/banner4.jpg">
+    <img src="images/banner3.jpg">
+    <img src="images/banner2.jpg">
+  </div>
+
+  <button class="btn prev">&#10094;</button>
+  <button class="btn next">&#10095;</button>
+</div>
+</section>
+  <!---blog page-->
+  
+  <section class="cam">
+    <h1> Our Podcasts</h1>
+    
+    <div class="row">
+      <div class="cam-col">
+        <div class="video-container">
+          <iframe width="100%" height="200" 
+            src="https://www.youtube.com/embed/6ulQu6DA2-U?si=KGTwOiMoiDuDWdja" 
+            title="Your Video Title"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </div>
+       
+          <h4>अर्थसाक्षरतेची Investmentwali स्टोरी</h4>
+       
+    </div>
+
+    <div class="cam-col">
+        <div class="video-container">
+          <iframe width="100%" height="200" 
+            src="https://www.youtube.com/embed/hDY53UuPxss?si=J_6da3gfjjqlG77s" 
+            title="Your Video Title"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </div>
+        
+          <h4>How to start investments</h4>
+       
+    </div>
+
+    <div class="cam-col">
+        <div class="video-container">
+          <iframe width="100%" height="200" 
+            src="https://www.youtube.com/embed/G5czEmJBmek?si=ijqc2S6xLQHTY4KH" 
+            title="Your Video Title"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </div>
+        
+          <h4>Journey to become a financial advisor</h4>
+       
+    </div>
+    </div>
+    
+    
+
+  </section>
+
+  
+      
+  
+  <!---footer-->
+ 
+<section class="footer">
+   
+    <h4>About Us</h4>
+    <p>Plot No 57, Survey No 8, Bilvadal Housing Society, Savedi,<br>
+Ahmednagar - 414003</p>
+    
+    <div class="icons">
+      <a href="https://www.instagram.com/deshpande_investments?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+        <i class="fa fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/share/19ob8GgHxo/?mibextid=wwXIfr" target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/rajesh-deshpande-3550791b9/?original_referer=https%3A%2F%2Fwww.deshpandeinvestments.com%2F&originalSubdomain=in" target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+      <a href="http://www.youtube.com/@rajeshdeshpande328" target="_blank">
+        <i class="fa fa-youtube-play"></i>
+      </a>
+     
+    </div>
+    
+  </section>
+
+  <!-----javascript for toggle menu------->
+  <script>
+      var navLinks = document.getElementById("navLinks");
+      function showmenu(){
+        navLinks.style.right ="0";
+      }
+
+        function hidemenu(){
+        navLinks.style.right ="-200px";
+
+ 
+
+
+
+      }
+           
+  const slides = document.querySelectorAll('.slides img');
+  let index = 0;
+
+  document.querySelector('.next').addEventListener('click', () => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  });
+
+  document.querySelector('.prev').addEventListener('click', () => {
+    slides[index].classList.remove('active');
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add('active');
+  });
+  </script>
+</body>
+</html>
